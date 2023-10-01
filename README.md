@@ -1,16 +1,28 @@
-# news_app_bloc
+# Flutter News App using Bloc
 
-A new Flutter project.
+### API Details
+- API server is (https://newsapi.org)
 
-## Getting Started
+### Project Details
+- Framework --> Flutter
+- State Management --> Bloc
+- Network call --> Dio
+- Local Storage --> Shared Preferences
 
-This project is a starting point for a Flutter application.
+### Feature
+- Fetch news articles from the NewsAPI Display them in a list with the article title, image, and a short description.
+- On tapping a list item, navigate to a new screen that displays the full content of the article, including the image, title, content, and published date.
+- Implement a pull-to-refresh feature that fetches the latest articles when the user pulls down on the list.
+- News search from the list
+- Light and Dark theme support
+- Offline news support
 
-A few resources to get you started if this is your first Flutter project:
+APK Link - (https://github.com/imtiazaminsajid/news_app_bloc/blob/master/apk/flutter_news_app_bloc.apk)
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Screenshots are given in below.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+##Light Mode
+![alt text](https://github.com/imtiazaminsajid/news_app_bloc/blob/master/screenshort/light_mode.png)
+
+##Dark Mode
+![alt text](https://github.com/imtiazaminsajid/news_app_bloc/blob/master/screenshort/dark_mode.png)
