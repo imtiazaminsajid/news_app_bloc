@@ -40,16 +40,16 @@ class ArticleListCubit extends Cubit<ArticleListState> {
 
     SharedPreferences preferences = await SharedPreferences.getInstance();
 
-    String? promoListString = await preferences.getString(getArticle);
+    String? articleListString = await preferences.getString(getArticle);
 
-    if (promoListString != null) {
+    if (articleListString != null) {
       try {
-        List<Articles> promoResponseModel = Articles.decode(promoListString);
+        List<Articles> articleResponseModel = Articles.decode(articleListString);
         emit(
           ArticleListSuccessful(
             isLoading: false,
             toastMessage: "Success",
-            articleList: promoResponseModel,
+            articleList: articleResponseModel,
           ),
         );
       } catch (e) {}
