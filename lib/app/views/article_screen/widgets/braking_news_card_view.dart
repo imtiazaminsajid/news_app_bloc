@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:news_app_bloc/app/utils/navigator_services.dart';
+import 'package:news_app_bloc/app/utils/theme/app_colors.dart';
 import 'package:news_app_bloc/app/views/article_details/view/article_details_screen.dart';
 
 import '../../../api/model/articles.dart';
+import '../../../bloc/theme_bloc/theme_cubit.dart';
 import '../../../widgets/common_network_image_widget.dart';
 import '../../../utils/functions.dart';
 
@@ -13,6 +16,10 @@ class BrakingNewsCardView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+    ThemeCubit  themeCubit = context.watch<ThemeCubit>();
+
+
     return GestureDetector(
       onTap: () {
         NavigatorServices().to(context: context, widget: ArticleDetailsScreen(anArticle: anArticle));
@@ -25,6 +32,7 @@ class BrakingNewsCardView extends StatelessWidget {
             borderRadius: BorderRadius.circular(25.0),
           ),
           elevation: 2,
+          // color: themeCubit.state.isDarkMode? AppColors.color030330: AppColors.white,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
@@ -47,7 +55,7 @@ class BrakingNewsCardView extends StatelessWidget {
                       height: 10,
                     ),
 
-                    Text(anArticle.title!, textAlign: TextAlign.justify, maxLines: 2, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: Colors.black87)),
+                    Text(anArticle.title!, textAlign: TextAlign.justify, maxLines: 2, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: themeCubit.state.isDarkMode? AppColors.colorF5F5F5: AppColors.color0D2238)),
 
                     const SizedBox(
                       height: 10,

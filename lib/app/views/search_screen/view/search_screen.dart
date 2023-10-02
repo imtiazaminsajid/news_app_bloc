@@ -46,7 +46,7 @@ class _SearchScreenState extends State<_SearchScreen> {
     ThemeCubit  themeCubit = context.watch<ThemeCubit>();
     return SafeArea(
       child: Scaffold(
-        backgroundColor: themeCubit.state.isDarkMode? AppColors.color0D2238 : AppColors.appBackground,
+        // backgroundColor: themeCubit.state.isDarkMode? AppColors.color0D2238 : AppColors.appBackground,
         body: BlocConsumer<SearchArticleListCubit, SearchArticleListState>(
           listener: (context, state) {},
           builder: (context, state) {
@@ -54,7 +54,7 @@ class _SearchScreenState extends State<_SearchScreen> {
               children: [
 
                 Container(
-                  color: themeCubit.state.isDarkMode?AppColors.color0D2238: AppColors.white ,
+                  // color: themeCubit.state.isDarkMode?AppColors.color0D2238: AppColors.white ,
                   height: kToolbarHeight + 20,
                   child: Row(
                     children: [

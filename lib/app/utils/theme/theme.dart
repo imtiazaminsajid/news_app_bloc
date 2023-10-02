@@ -16,7 +16,7 @@ class CustomTheme {
       error: AppColors.colorF14F4A,
       onError: AppColors.colorFBFBFB,
       background: AppColors.colorFBFBFB,
-      onBackground: AppColors.color008541,
+      onBackground: AppColors.white,
       surface: AppColors.colorFBFBFB,
       onSurface: AppColors.color008541,
     ),
@@ -27,7 +27,7 @@ class CustomTheme {
     ),
   );
 
-  static ThemeData darkTheme = ThemeData.light().copyWith(
+  static ThemeData darkTheme = ThemeData.dark().copyWith(
     visualDensity: VisualDensity.compact,
     primaryColor: AppColors.color001B0D,
     scaffoldBackgroundColor: AppColors.black,
@@ -40,12 +40,12 @@ class CustomTheme {
       error: AppColors.colorF14F4A,
       onError: AppColors.colorFBFBFB,
       background: AppColors.colorFBFBFB,
-      onBackground: AppColors.color008541,
+      onBackground: AppColors.color181D3D,
       surface: AppColors.colorFBFBFB,
       onSurface: AppColors.color008541,
     ),
-    appBarTheme: const AppBarTheme(
-      color: AppColors.appBackground,
+    appBarTheme: AppBarTheme(
+      color: AppColors.black,
       elevation: 0,
       centerTitle: false,
     ),

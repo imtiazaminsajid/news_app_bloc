@@ -49,7 +49,7 @@ class _ArticleScreenState extends State<_ArticleScreen> {
     ThemeCubit  themeCubit = context.watch<ThemeCubit>();
 
     return Scaffold(
-      backgroundColor: themeCubit.state.isDarkMode? AppColors.color0D2238 : AppColors.appBackground,
+      // backgroundColor: themeCubit.state.isDarkMode? AppColors.color0D2238 : AppColors.appBackground,
       appBar: AppBar(
         toolbarHeight: 80,
         backgroundColor: Colors.transparent,
@@ -93,10 +93,10 @@ class _ArticleScreenState extends State<_ArticleScreen> {
             child: Container(
               width: 60,
                 margin: const EdgeInsets.only(right: 10),
-                child: const Icon(
+                child: Icon(
                   Icons.search,
-                  size: 20,
-                  color: Color(0xff8a8989),
+                  size: 22,
+                  color: themeCubit.state.isDarkMode? AppColors.white: AppColors.black,
                 )),
           )
         ],

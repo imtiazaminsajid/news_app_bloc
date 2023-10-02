@@ -19,25 +19,25 @@ class ArticleDetailsScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: themeCubit.state.isDarkMode? AppColors.color0D2238 : AppColors.appBackground,
+        // backgroundColor: themeCubit.state.isDarkMode? AppColors.color0D2238 : AppColors.appBackground,
         elevation: 0.0,
         leading: InkWell(
           onTap: () {
             NavigatorServices().pop(context: context);
           },
           child: Container(
-            margin: const EdgeInsets.all(8),
-            height: 30,
-            width: 30,
+            // margin: const EdgeInsets.all(8),
+            height: 40,
+            width: 40,
             child: Card(
               shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(15.0),
+                borderRadius: BorderRadius.circular(40.0),
               ),
               elevation: 2,
-              child: const Icon(
+              child: Icon(
                 Icons.arrow_back,
                 color: Colors.black54,
-                size: 16,
+                size: 20,
               ),
             ),
           ),
